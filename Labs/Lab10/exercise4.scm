@@ -1,0 +1,6 @@
+(define (sosd num)
+  (if (>= num 1)
+    (+ ((lambda (x) (* x x)) (modulo num 10)) (sosd (quotient num 10)))
+    (* num num)
+  )
+)
